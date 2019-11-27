@@ -16,7 +16,7 @@ class EquiposLigas extends Migration
         Schema::dropIfExists('EquiposLigas');
         Schema::create('EquiposLigas', function (Blueprint $table) {
             $table->bigIncrements('id');
-
+            $table->string('nombre');
             $table->timestamps();
 
         });
