@@ -13,7 +13,13 @@ class EquiposLigas extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('EquiposLigas');
+        Schema::create('EquiposLigas', function (Blueprint $table) {
+            $table->bigIncrements('id');
+
+            $table->timestamps();
+
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class EquiposLigas extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('partidos');
     }
 }
